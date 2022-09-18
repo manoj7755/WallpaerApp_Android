@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wallpaer_App">
         <activity
+            android:name=".ActivityClass.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivityClass.SplashScreen"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,13 +24,11 @@
         </activity>
         <activity
             android:name=".ActivityClass.MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-
     </application>
 
 </manifest>
