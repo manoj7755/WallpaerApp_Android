@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityClass.MainActivity">
+    <FrameLayout
+        android:id="@+id/containers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"/>
+<!--<ScrollView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginBottom="?attr/actionBarSize">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/background"-->
+<!--                android:orientation="vertical">-->
+
+
+<!--                <EditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="@dimen/_20sdp"-->
+<!--                    android:background="@drawable/edittext_background"-->
+<!--                    android:hint="@string/hint_search_text"-->
+<!--                    android:padding="@dimen/_16sdp"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:textColorHint="@color/hint_text_color" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_8sdp"-->
+<!--                    android:layout_marginBottom="@dimen/_8sdp"-->
+<!--                    android:fontFamily="sans-serif"-->
+<!--                    android:text="Best of the Month"-->
+<!--                    android:textColor="@color/text_color"-->
+<!--                    android:textSize="@dimen/_26ssp"-->
+<!--                    android:paddingLeft="@dimen/_16sdp"/>-->
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/recyclerView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_8sdp"-->
+<!--                    android:layout_marginBottom="@dimen/_8sdp"-->
+<!--                    android:fontFamily="sans-serif"-->
+<!--                    android:text="The color Tone"-->
+<!--                    android:textColor="@color/text_color"-->
+<!--                    android:textSize="@dimen/_20ssp"-->
+<!--                    android:paddingLeft="@dimen/_16sdp"/>-->
+
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/color_recyclerView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_8sdp"-->
+<!--                    android:layout_marginBottom="@dimen/_8sdp"-->
+<!--                    android:fontFamily="sans-serif"-->
+<!--                    android:text="Categories"-->
+<!--                    android:textColor="@color/text_color"-->
+<!--                    android:textSize="@dimen/_20ssp"-->
+<!--                    android:paddingLeft="@dimen/_16sdp"/>-->
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/categories_recyclerView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
+
+<!--        </FrameLayout>-->
+<!--    </RelativeLayout>-->
+<!--</ScrollView>-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+
+        app:menu="@menu/navigation_item" />
+    </RelativeLayout>

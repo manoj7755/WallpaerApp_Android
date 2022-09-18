@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_90sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_12sdp"
+    app:cardUseCompatPadding="true"
+
+   >
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/category_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:src="@drawable/flower"
+        app:shapeAppearanceOverlay="@style/RoundImageView"/>
+
+
+    <TextView
+        android:id="@+id/categories_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/arima_madurai_thin"
+        android:text="Natures"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_19sdp" />
+</androidx.cardview.widget.CardView>

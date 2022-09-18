@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Wallpaper</string>
+    <string name="hint_search_text">Find Wallpaper</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    // For Categories item-->
+<!--    <string name="abstract_item">Abstract</string>-->
+<!--    <string name="nature_item">Nature</string>-->
+<!--    <string name="landscapes_item">Landscapes</string>-->
+<!--    <string name="flowers_item">Flowers</string>-->
+<!--    <string name="mountains_item">Mountains</string>-->
+<!--    <string name="forest_item">Forest</string>-->
+</resources>
