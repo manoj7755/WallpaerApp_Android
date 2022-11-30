@@ -75,7 +75,7 @@ class HomeFragment : Fragment() {
 
 
         // For Categories Item
-        var categories_arrdata = ArrayList<CategoriesModel>()
+        val categories_arrdata = ArrayList<CategoriesModel>()
         categories_arrdata.add(CategoriesModel("Abstract",R.drawable.male_vector))
 //        categories_arrdata.add(CategoriesModel("Nature",R.drawable.nature))
 //        categories_arrdata.add(CategoriesModel("Landscapes",R.drawable.landscape))
@@ -90,47 +90,5 @@ class HomeFragment : Fragment() {
 
         return view
     }
-//fun fetchWallpaper(){
-//    val request = StringRequest(com.android.volley.Request.Method.GET,
-//        "https://api.pexels.com/v1/curated/?page =1&per_page=10",object:Response.Listener<String>{
-//            override fun onResponse(response: String?) {
-//                try {
-//                    val jsonObject = JSONObject()
-//                    val jsonArray  = jsonObject.getJSONArray("photos")
-//                    val length = jsonArray.length()
-//                    for (i in 0..length){
-//                       val result =  jsonArray.getJSONObject(i)
-//
-//                        var id = result.getInt("id")
-//                        val objectImage = result.getJSONObject("src")
-//                        val ImageUrl = objectImage.getString("portrait")
-//                      arrdata.add(Horizantal_Image(id,ImageUrl))
-//
-//                    }
-//
-//
-//                }catch (e:JSONException){
-//
-//                }
-//            }
-//
-//        } ,object :Response.ErrorListener{
-//            override fun onErrorResponse(error: VolleyError?) {
-//
-//            }
-//
-//        }
-//    )
-//
-//        fun getHeaders(): MutableMap<String, String> {
-//            val headers = HashMap<String, String>()
-//            headers.put("Authorization","563492ad6f91700001000001be50e17bdfa7474b85f24e7d823f5e8b")
-//            return headers
-//        }
-//
-//    val RequestQuee = Volley.newRequestQueue(context)
-//        RequestQuee.apply {
-//            add(request)
-//        }
-//}
+
 }

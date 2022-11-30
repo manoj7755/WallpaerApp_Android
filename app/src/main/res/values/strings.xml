@@ -3,6 +3,9 @@
     <string name="hint_search_text">Find Wallpaper</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="down">Down</string>
+    <string name="image">image</string>
+    <string name="imagebtn">imagebtn</string>
 
     <!--    // For Categories item-->
     <!--    <string name="abstract_item">Abstract</string>-->
