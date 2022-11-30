@@ -27,7 +27,7 @@ class CategoriesAdapter(val categories_arrdata:ArrayList<CategoriesModel>):Recyc
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
      holder.category_img.setImageResource(categories_arrdata[position].image)
 //        holder.category_img.setImageResource(R.drawable.nature)
-//        Log.d("restag", value.toString())
+//        Log.d(" restag", value.toString())
         holder.title.text = categories_arrdata[position].name
 
     }

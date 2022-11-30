@@ -1,13 +1,17 @@
 package com.example.wallpaer_app.Fragment
 
+import android.app.Application
+import android.app.DownloadManager
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+
 import com.example.wallpaer_app.AdapterClass.CategoriesAdapter
 import com.example.wallpaer_app.AdapterClass.ColorAdapter
 import com.example.wallpaer_app.AdapterClass.HorizantalAdapter
@@ -16,11 +20,12 @@ import com.example.wallpaer_app.ModelClass.Horizantal_Image
 import com.example.wallpaer_app.ModelClass.colorModel
 import com.example.wallpaer_app.R
 import kotlinx.android.synthetic.main.fragment_home.view.*
+
 import java.util.*
 
 
 class HomeFragment : Fragment() {
-
+    var arrdata  = ArrayList<Horizantal_Image>()
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //
@@ -30,8 +35,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        var arrdata  = ArrayList<Horizantal_Image>()
+// fetchWallpaper()
+//
         arrdata.add(Horizantal_Image(R.drawable.image1))
         arrdata.add(Horizantal_Image(R.drawable.image2))
         arrdata.add(Horizantal_Image(R.drawable.image3))
@@ -47,7 +52,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 //      HomeFragment(view.recyclerView)
-        view.recyclerView.adapter = HorizantalAdapter(arrdata)
+        view.recyclerView.adapter = HorizantalAdapter(requireActivity(),arrdata)
         view.recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
 
 
@@ -85,5 +90,47 @@ class HomeFragment : Fragment() {
 
         return view
     }
-
+//fun fetchWallpaper(){
+//    val request = StringRequest(com.android.volley.Request.Method.GET,
+//        "https://api.pexels.com/v1/curated/?page =1&per_page=10",object:Response.Listener<String>{
+//            override fun onResponse(response: String?) {
+//                try {
+//                    val jsonObject = JSONObject()
+//                    val jsonArray  = jsonObject.getJSONArray("photos")
+//                    val length = jsonArray.length()
+//                    for (i in 0..length){
+//                       val result =  jsonArray.getJSONObject(i)
+//
+//                        var id = result.getInt("id")
+//                        val objectImage = result.getJSONObject("src")
+//                        val ImageUrl = objectImage.getString("portrait")
+//                      arrdata.add(Horizantal_Image(id,ImageUrl))
+//
+//                    }
+//
+//
+//                }catch (e:JSONException){
+//
+//                }
+//            }
+//
+//        } ,object :Response.ErrorListener{
+//            override fun onErrorResponse(error: VolleyError?) {
+//
+//            }
+//
+//        }
+//    )
+//
+//        fun getHeaders(): MutableMap<String, String> {
+//            val headers = HashMap<String, String>()
+//            headers.put("Authorization","563492ad6f91700001000001be50e17bdfa7474b85f24e7d823f5e8b")
+//            return headers
+//        }
+//
+//    val RequestQuee = Volley.newRequestQueue(context)
+//        RequestQuee.apply {
+//            add(request)
+//        }
+//}
 }

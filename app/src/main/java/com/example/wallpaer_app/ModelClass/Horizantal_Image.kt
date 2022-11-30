@@ -1,3 +1,3 @@
 package com.example.wallpaer_app.ModelClass
 
-data class Horizantal_Image (val Image:Int)
+data class Horizantal_Image (val ImageUrl:Int)

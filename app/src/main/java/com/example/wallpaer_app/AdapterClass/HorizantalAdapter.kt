@@ -1,18 +1,15 @@
 package com.example.wallpaer_app.AdapterClass
 
-import android.content.Context
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.wallpaer_app.Fragment.HomeFragment
 import com.example.wallpaer_app.ModelClass.Horizantal_Image
 import com.example.wallpaer_app.R
 import kotlinx.android.synthetic.main.horizantal_item.view.*
 import java.util.*
-import java.util.zip.Inflater
-
-class HorizantalAdapter(val arrdata:ArrayList<Horizantal_Image>):RecyclerView.Adapter<HorizantalAdapter.ViewHolder>() {
+class HorizantalAdapter(val context: Activity,val arrdata:ArrayList<Horizantal_Image>):RecyclerView.Adapter<HorizantalAdapter.ViewHolder>() {
     class ViewHolder(itemview:View):RecyclerView.ViewHolder(itemview) {
       val imagePath = itemview.card_image
     }
@@ -22,7 +19,9 @@ class HorizantalAdapter(val arrdata:ArrayList<Horizantal_Image>):RecyclerView.Ad
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-holder.imagePath.setImageResource(arrdata[position].Image)
+holder.imagePath.setImageResource(arrdata[position].ImageUrl)
+//        Glide.with(context).load(arrdata[position].ImageUrl).into(holder.imagePath)
+
     }
 
     override fun getItemCount(): Int {
